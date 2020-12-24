@@ -52,6 +52,11 @@ public:
 
         return nullptr;
     }
+
+    void* alloc_cacheable(size_t size) noexcept override { return nullptr; }
+    bool flush(void* handle, const size_t size) noexcept override { return false; }
+    bool invalidate(void* handle, const size_t size) noexcept override { return false; }
+
     /**
      * @brief The PreAllocator class cannot release the handle
      * @return false
