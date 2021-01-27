@@ -245,9 +245,9 @@ if(THREADING STREQUAL "TBB" OR THREADING STREQUAL "TBB_AUTO")
               DESTINATION ${IE_CPACK_IE_DIR}/external/tbb
               COMPONENT tbb)
     endif()
-    install(FILES "${TBB}/LICENSE"
-            DESTINATION ${IE_CPACK_IE_DIR}/external/tbb
-            COMPONENT tbb)
+    #install(FILES "${TBB}/LICENSE"
+            #DESTINATION ${IE_CPACK_IE_DIR}/external/tbb
+            #COMPONENT tbb)
     install(FILES "${TBB}/cmake/TBBConfig.cmake"
                   "${TBB}/cmake/TBBConfigVersion.cmake"
             DESTINATION ${IE_CPACK_IE_DIR}/external/tbb/cmake
