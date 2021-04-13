@@ -151,7 +151,7 @@ public:
     virtual std::string GetName() const noexcept = 0;
 
     /**
-     * @brief      Sets a name for a plugin 
+     * @brief      Sets a name for a plugin
      * @param[in]  name  The name
      */
     virtual void SetName(const std::string& name) noexcept = 0;
@@ -228,6 +228,9 @@ public:
      */
     virtual ExecutableNetwork ImportNetwork(const std::string& modelFileName,
                                             const std::map<std::string, std::string>& config) = 0;
+
+    virtual ExecutableNetwork ImportNetwork(uint8_t *modelBuffer, size_t modelLen,
+                                                  const std::map<std::string, std::string>& config) = 0;
 
     /**
      * @brief Creates an executable network from an previously exported network using plugin implementation
